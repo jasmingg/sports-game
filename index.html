@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body onload="timerStart(); updateLeaderboard();">
+        <div class="container">
+            <div class="column">
+                <h3>HOME</h3>
+                <div class="score-background">
+                <h2 class="score" id="home-el">0</h2>
+                </div>
+                <div class="allButtons">
+                    <button class = "add-el" onclick='homeAdd1(); updateLeaderboard(); playForPoint()'>+1</button>
+                    <button  class = "add-el"  onclick='homeAdd2(); updateLeaderboard(); playForPoint()'>+2</button>
+                    <button class = "add-el"  onclick='homeAdd3(); updateLeaderboard(); playForPoint()'>+3</button>
+                </div>
+            </div>
+            <div class="column">
+                <h3>GUEST</h3>
+                <div class="score-background">
+                <h2 class="score" id="guest-el">0</h2>
+                </div>
+                <div class="allButtons">
+                <button class = "add-el"  onclick='guestAdd1(); updateLeaderboard(); playForPoint()'>+1</button>
+                <button  class = "add-el" onclick='guestAdd2(); updateLeaderboard(); playForPoint()'>+2</button>
+                <button  class = "add-el" onclick='guestAdd3(); updateLeaderboard(); playForPoint()'>+3</button>
+                </div>
+            </div>
+            </div>
+            <div class="settings">
+            <p class="leader-display"> 
+                <span class = "leaderText" id="leader-text"> Leader: </span> <br> 
+                <span id="leader-name"> Tie </span></p>
+            <button class="resetButton" onclick="resetScore(); updateLeaderboard();">RESET GAME</button>
+            <p class = "timerStyle" id="timerDisplay"> 0:10</p>
+            </div>
+        <script src="index.js"></script>
+    </body>
+</html>
